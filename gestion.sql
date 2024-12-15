@@ -2,7 +2,6 @@ CREATE DATABASE GestionPlayer;
 
 USE GestionPlayer;
 
-
 CREATE TABLE club (
   id INT PRIMARY KEY NOT NULL ,
   nom VARCHAR(100),
@@ -42,6 +41,10 @@ CREATE TABLE player (
     name VARCHAR(100),
     photo VARCHAR(200),
     position ENUM('GK', 'CM','ST','LW')DEFAULT 'CM',
+    id_club INT, 
+    id_STQ_GK INT, 
+    id_nationalites INT, 
+    id_STQ INT,
     FOREIGN KEY (id_club) REFERENCES club (id), 
     FOREIGN KEY (id_STQ_GK) REFERENCES STQ_GK (id), 
     FOREIGN KEY (id_nationalites) REFERENCES nationalites (id), 

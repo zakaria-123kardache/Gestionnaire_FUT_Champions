@@ -1,11 +1,12 @@
 services:
   db:
-    image: mysql:latest # Correct database imag
+    image: mysql:latest # Correct database image
+
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_DATABASE=new_database
-      - MYSQL_USER=myusere
-      - MYSQL_PASSWORD=mypassword
+      - MYSQL_DATABASE=GestionPlayer
+      - MYSQL_USER=myusere1
+      - MYSQL_PASSWORD=mypassword1
     volumes:
       - "./db:/docker-entrypoint-initdb.d"
       - mysql_data:/var/lib/mysql
