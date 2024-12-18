@@ -1,3 +1,7 @@
+<?php
+            include('./conexion.php');
+        ?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -10,6 +14,10 @@
 </head>
 
 <body>
+
+
+
+
 <!-- Dashboard -->
 <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
     <!-- Vertical Navbar -->
@@ -21,7 +29,7 @@
             </button>
             <!-- Brand -->
             <a class="navbar-brand py-lg-2 mb-lg-5 px-lg-6 me-0" href="#">
-                <h3 class="text-success"><img src="./Assets/img/logg.jpg" width="40"><span class="text-info">FUT</span>SCHAMPION</h3> 
+                <h3 class="text-success"><img src="./Assets/img/logg.jpg" width="35"><span class="text-info">FUT</span>SCHAMPION</h3> 
             </a>
             <!-- User menu (mobile) -->
             <div class="navbar-user d-lg-none">
@@ -40,7 +48,7 @@
             <!-- Collapse -->
             <div class="collapse navbar-collapse" id="sidebarCollapse">
                 <!-- Navigation -->
-                <ul class="navbar-nav">
+                <!-- <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="bi bi-house"></i> Dashboard
@@ -62,7 +70,7 @@
                         </a>
                     </li>
                 
-                </ul>
+                </ul> -->
                 <!-- Divider -->
                 <hr class="navbar-divider my-5 opacity-20">
                
@@ -70,7 +78,7 @@
         </div>
     </nav>
     <!-- Main content -->
-    <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+    <div class="h-screen flex-grow-1 overflow-y-lg-auto ">
         <!-- Header -->
         <header class="bg-surface-primary border-bottom pt-6">
             <div class="container-fluid">
@@ -78,30 +86,30 @@
                     <div class="row align-items-center">
                         <div class="col-sm-6 col-12 mb-4 mb-sm-0">
                             <!-- Title -->
-                            <h1 class="h2 mb-0 ls-tight">
+                            <h1 class="h2 mb-0 ">
                                 <img src="./Assets/img/logg.jpg" width="40">FUT_Champions </h1>
                         </div>
                         <!-- Actions -->
                         <div class="col-sm-6 col-12 text-sm-end">
                             <div class="mx-n1">
-                                <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
+                                <!-- <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
                                     <span class=" pe-2">
                                         <i class="bi bi-pencil"></i>
                                     </span>
                                     <span>Edit</span>
-                                </a>
+                                </a> -->
                                 <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
                                     <span class=" pe-2">
                                         <i class="bi bi-plus"></i>
                                     </span>
-                                    <span>Create</span>
+                                    <span>Create New Player</span>
                                 </a>
-                                <a href="#" class="btn d-inline-flex btn-sm btn-warning mx-1">
+                                <!-- <a href="#" class="btn d-inline-flex btn-sm btn-warning mx-1">
                                     <span class=" pe-2">
                                         <i class="bi bi-gear-wide-connected"></i>
                                     </span>
                                     <span>Manage</span>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
@@ -128,7 +136,7 @@
                                     <th scope="col">nationalites</th>
                                     <th scope="col">club</th>
                                     <th scope="col">rating</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col" class="text-center">Action</th>
                                     <!-- <th scope="col">pace</th>
                                     <th scope="col">shooting</th>
                                     <th scope="col">passing</th>
@@ -165,12 +173,25 @@
                                         </span>
                                     </td>
                                     <td class="text-end">
-                                        <a href="#" class="btn btn-sm btn-neutral">View</a>
+                                        
+                                        <a href="#" class="btn d-inline-flex btn-sm btn-warning mx-1">
+                                            
+                                            <span>View</span>
+                                        </a>
+
+                                        <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
+                                            <span class=" pe-2">
+                                                <i class="bi bi-pencil"></i>
+                                            </span>
+                                            <span>Edit</span>
+                                        </a>
+                                        <!-- <a href="#" class="btn btn-sm btn-neutral">Edit</a> -->
                                         <button type="button" onclick="showSweetAlert()" class="btn btn-sm btn-square btn-neutral text-danger-hover">
                                             <i class="bi bi-trash"></i>
                                         </button>
                                     </td>
                                 </tr>
+
                                 <tr>
                                     <td>
                                         <img alt="..." src="https://cdn.sofifa.net/players/158/023/25_120.png" class="avatar avatar-sm rounded-circle me-2">
@@ -197,7 +218,19 @@
                                         </span>
                                     </td>
                                     <td class="text-end">
-                                        <a href="#" class="btn btn-sm btn-neutral">View</a>
+                                        
+                                        <a href="#" class="btn d-inline-flex btn-sm btn-warning mx-1">
+                                            
+                                            <span>View</span>
+                                        </a>
+
+                                        <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
+                                            <span class=" pe-2">
+                                                <i class="bi bi-pencil"></i>
+                                            </span>
+                                            <span>Edit</span>
+                                        </a>
+                                        <!-- <a href="#" class="btn btn-sm btn-neutral">Edit</a> -->
                                         <button type="button" onclick="showSweetAlert()" class="btn btn-sm btn-square btn-neutral text-danger-hover">
                                             <i class="bi bi-trash"></i>
                                         </button>
@@ -209,7 +242,7 @@
                         </table>
                     </div>
                     <div class="card-footer border-0 py-5">
-                        <span class="text-muted text-sm">Showing 10 items out of 250 results found</span>
+                        <!-- <span class="text-muted text-sm">Showing 10 items out of 250 results found</span> -->
                         <nav aria-label="Page navigation example">
                           <ul class="pagination">
                             <li class="page-item"><a class="page-link disabled" href="#">Previous</a></li>
