@@ -218,6 +218,9 @@ include('./conexion.php');
                                         </td>
                                     </tr>
 
+
+
+
                                     <tr>
                                         <td>
                                             <img alt="..." src="https://cdn.sofifa.net/players/158/023/25_120.png" class="avatar avatar-sm rounded-circle me-2">
@@ -263,6 +266,9 @@ include('./conexion.php');
                                         </td>
                                     </tr>
 
+
+
+                                    
 
                                 </tbody>
                             </table>
