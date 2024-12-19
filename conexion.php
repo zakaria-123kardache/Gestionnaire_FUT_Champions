@@ -10,5 +10,5 @@
             if(!$conn){
                 die('Erreur : ' .mysqli_connect_error());
             }
-            echo 'Connexion réussie';
+            // echo 'Connexion réussie';
         ?>

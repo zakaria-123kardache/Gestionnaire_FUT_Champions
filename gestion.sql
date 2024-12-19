@@ -143,7 +143,7 @@ VALUES
 ('Morocco', 'https://cdn.sofifa.net/flags/ma.png'),
 ('Italy', 'https://cdn.sofifa.net/flags/it.png');
 
-INSERT INTO STQ (Rating ,pace, shooting, passing, defending, dribbling, physical) VALUES 
+INSERT INTO STQ (Rating ,pace, shooting, passing, defending, dribling, physical) VALUES 
 (85,85, 92, 91, 35, 95, 65),
 (85,84, 94, 82, 34, 87, 77),
 (85,74, 86, 93, 64, 88, 78),
