@@ -34,7 +34,7 @@
 
                     <div id="error"></div>
 
-                    <form id="form" style="color: aliceblue; background-color: #20252A;">
+                    <form id="form" action="/dashboard.php" style="color: aliceblue; background-color: #20252A;">
 
 
 

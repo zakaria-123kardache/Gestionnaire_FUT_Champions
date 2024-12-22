@@ -4,7 +4,7 @@ services:
 
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_DATABASE=GestionPlayer
+      - MYSQL_DATABASE=ShiMatsch
       - MYSQL_USER=myusere
       - MYSQL_PASSWORD=mypassword
     volumes:
