@@ -120,8 +120,6 @@ $sql = " SELECT * FROM donnes ";
 
 
 
-            <main class="py-6 bg-surface-secondary">
-                <div class="container-fluid">
                     <!-- Card stats -->
 
                     <?php
@@ -212,7 +210,17 @@ $sql = " SELECT * FROM donnes ";
                       echo "<div class=\"card-footer border-0 py-5\">";
                       echo "<nav aria-label=\"Page navigation example\">";
                       echo "<ul class=\"pagination\">";
-                      echo " <li class=\"page-item\">" . "" ."";
+                      echo " <li class=\"page-item\">" . "<a class=\"page-link disabled\" >" ."Previous" ."</a>" . "</li>";
+                      echo " <li class=\"page-item\">" . "<a class=\"page-link bg-info text-white\">" ."1" ."</a>" . "</li>";
+                      echo " <li class=\"page-item\">" . "<a class=\"page-link \">" ."2" ."</a>" . "</li>";
+                      echo " <li class=\"page-item\">" . "<a class=\"page-link \">" ."3" ."</a>" . "</li>";
+                      echo " <li class=\"page-item\">" . "<a class=\"page-link \">" ."Next" ."</a>" . "</li>";
+                      echo "</ul>";
+                      echo "</nav>";
+                      echo "</div>";
+                      echo "</div>";
+                      echo "</div>";
+                      echo "</main>";
                       
 
 
@@ -233,175 +241,8 @@ $sql = " SELECT * FROM donnes ";
 
 
 
-
-
-                    <div class="card shadow border-0 mb-7">
-                        <div class="card-header">
-                            <h5 class="mb-0">Applications</h5>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-hover table-nowrap">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">Name</th>
-                                        <!-- <th scope="col">photo</th> -->
-                                        <!-- <th scope="col">Position</th> -->
-                                        <!-- <th scope="col">nationalites</th>
-                                        <th scope="col">club</th> -->
-                                        <th scope="col">rating</th>
-                                        <th scope="col">pace</th>
-                                        <th scope="col">shooting</th>
-                                        <th scope="col">passing</th>
-                                        <th scope="col">dribbling</th>
-                                        <th scope="col">defending</th>
-                                        <th scope="col">physical</th>
-                                        <th scope="col">pace</th>
-                                        <th scope="col">shooting</th>
-                                        <th scope="col">passing</th>
-                                        <th scope="col">dribbling</th>
-                                        <th scope="col">defending</th>
-                                        <th scope="col">physical</th>
-                                        <th scope="col" class="text-center">Action</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <img alt="..." src="https://cdn.sofifa.net/players/158/023/25_120.png" class="avatar avatar-sm rounded-circle me-2">
-                                            <a class="text-heading font-semibold" href="#">
-                                                Lionel Messi
-                                            </a>
-                                        </td>
-
-                                        <!-- <td>
-                                            <img alt="..." src="https://cdn.sofifa.net/flags/ar.png" class="avatar avatar-xs rounded-circle me-2">
-                                            <a class="text-heading font-semibold">
-                                                Argentina
-                                        </td>
-                                        <td>
-                                            <img alt="..." src="https://cdn.sofifa.net/meta/team/239235/120.png" class="avatar avatar-xs rounded-circle me-2">
-                                            <a class="text-heading font-semibold">
-                                                Inter Miami
-                                            </a>
-                                        </td> -->
-
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-
-                                        <td class="text-end">
-
-                                            <a href="#" class="btn d-inline-flex btn-sm btn-warning mx-1">
-
-                                                <span>View</span>
-                                            </a>
-
-                                            <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
-                                                <span class=" pe-2">
-                                                    <i class="bi bi-pencil"></i>
-                                                </span>
-                                                <span>Edit</span>
-                                            </a>
-                                            <!-- <a href="#" class="btn btn-sm btn-neutral">Edit</a> -->
-                                            <button type="button" onclick="showSweetAlert()" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-
-
-
-                                </tbody>
-                            </table>
-                        </div>
-
-
-                        <div class="card-footer border-0 py-5">
-                            <!-- <span class="text-muted text-sm">Showing 10 items out of 250 results found</span> -->
-
-
-
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link disabled" href="#">Previous</a></li>
-                                    <li class="page-item"><a class="page-link bg-info text-white" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                            </nav>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </main>
+                <!-- </div>
+            </main> -->
 
 
 
