@@ -133,7 +133,7 @@ $sql = " SELECT * FROM donnes ";
                     echo "<div class=\"table-responsive\">";
                     echo "<table class=\"table table-hover table-nowrap\">";
                     echo "<thead class=\"thead-light\">";
-                    echo "<tr>";
+                    echo "<>";
                     echo "<th scope=\"col\">Name</th>";
                     echo "<th scope=\"col\">rating</th>";
                     echo "<th scope=\"col\">pace</th>";
@@ -149,10 +149,46 @@ $sql = " SELECT * FROM donnes ";
                     echo "<th scope=\"col\">defending</th>";
                     echo "<th scope=\"col\">physical</th>";
                     echo "<th scope=\"col\" class=\"text-center\">Action</th>";
+                    echo "<th></th>";
                     echo "</tr>";
                     echo "</thead>";
                     echo "<tbody>";
-                    echo "<th></th>";
+                    while ($row = mysqli_fetch_array($result)) {
+                        echo " <tr>";
+                        echo " <td>" . $row['id'] . "</td>";
+                        echo " <td>" . " <img alt=\"...\" src=\"$row['photo']\" class=\"avatar avatar-sm rounded-circle me-2\">" . "</td>";
+                        echo "  <a class=\"text-heading font-semibold\">"  . $row['name'] . "</a>";
+                        echo "</td>";
+                        
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['rating'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['diving'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['handling'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['kicking'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['reflexes'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['speed'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['positioning'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['pace'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['Shooting'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['dribling'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['physical'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['passing'] . "</span>". "</td>";
+
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['defending'] . "</span>". "</td>";
+                  
+                        echo "</tr>";
+                      }
+                   
 
 
                     ?>
