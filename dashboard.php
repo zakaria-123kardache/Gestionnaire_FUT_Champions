@@ -1,6 +1,11 @@
 <?php
 include('./conexion.php');
+
+$sql = " SELECT * FROM donnes ";
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,12 +23,7 @@ include('./conexion.php');
 
 
     <?php
-    // $sql = "SELECT * FROM player";
-    // if($result = mysqli_query($link,$sql)){
-    //     if ( mysqli_num_rows($result) > 0){
-    //         echo " data est aficher ";
-    //     }
-    // }
+
     ?>
 
     <!-- Dashboard -->
@@ -37,7 +37,7 @@ include('./conexion.php');
                 </button>
                 <!-- Brand -->
                 <a class="navbar-brand py-lg-2 mb-lg-5 px-lg-6 me-0" href="#">
-                    <h3 class="text-success"><img src="./Assets/img/logg.jpg" width="35"><span class="text-info">FUT</span><?php $row["name"] ?></h3>
+                    <h3 class="text-success"><img src="./Assets/img/logg.jpg" width="35"><span class="text-info">FUT</span><?php ?></h3>
                 </a>
                 <!-- User menu (mobile) -->
                 <div class="navbar-user d-lg-none">
@@ -101,24 +101,14 @@ include('./conexion.php');
                             <!-- Actions -->
                             <div class="col-sm-6 col-12 text-sm-end">
                                 <div class="mx-n1">
-                                    <!-- <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
-                                    <span class=" pe-2">
-                                        <i class="bi bi-pencil"></i>
-                                    </span>
-                                    <span>Edit</span>
-                                </a> -->
+
                                     <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
                                         <span class=" pe-2">
                                             <i class="bi bi-plus"></i>
                                         </span>
                                         <span>Create New Player</span>
                                     </a>
-                                    <!-- <a href="#" class="btn d-inline-flex btn-sm btn-warning mx-1">
-                                    <span class=" pe-2">
-                                        <i class="bi bi-gear-wide-connected"></i>
-                                    </span>
-                                    <span>Manage</span>
-                                </a> -->
+
                                 </div>
                             </div>
                         </div>
@@ -127,27 +117,51 @@ include('./conexion.php');
                 </div>
             </header>
             <!-- Main -->
+
+
+
             <main class="py-6 bg-surface-secondary">
                 <div class="container-fluid">
                     <!-- Card stats -->
 
-
-
                     <?php
-                    $sql = "SELECT * FROM player";
-                    if ($result = mysqli_query($link, $sql)) {
-                        if (mysqli_num_rows($result) > 0) {
-                            echo " data est aficher ";
-                            echo "";
+                    $sql = " SELECT * FROM players ";
+                    echo "< class=\"card shadow border-0 mb-7\">";
+                    echo "<div class=\"card-header\">";
+                    echo "<h5 class=\"mb-0\">Applications</h5>";
+                    echo "</div>";
+                    echo "<div class=\"table-responsive\">";
+                    echo "<table class=\"table table-hover table-nowrap\">";
+                    echo "<thead class=\"thead-light\">";
+                    echo "<tr>";
+                    echo "<th scope=\"col\">Name</th>";
+                    echo "<th scope=\"col\">rating</th>";
+                    echo "<th scope=\"col\">pace</th>";
+                    echo "<th scope=\"col\">shooting</th>";
+                    echo "<th scope=\"col\">passing</th>";
+                    echo "<th scope=\"col\">dribbling</th>";
+                    echo "<th scope=\"col\">defending</th>";
+                    echo "<th scope=\"col\">physical</th>";
+                    echo "<th scope=\"col\">pace</th>";
+                    echo "<th scope=\"col\">shooting</th>";
+                    echo "<th scope=\"col\">passing</th>";
+                    echo "<th scope=\"col\">dribbling</th>";
+                    echo "<th scope=\"col\">defending</th>";
+                    echo "<th scope=\"col\">physical</th>";
+                    echo "<th scope=\"col\" class=\"text-center\">Action</th>";
+                    echo "</tr>";
+                    echo "</thead>";
+                    echo "<tbody>";
+                    echo "<th></th>";
 
-                            
-                        }
-                    }
 
-                      // Close connection
-                      mysqli_close($link);
-                      ?>
-                  
+                    ?>
+
+
+
+
+
+
                     <div class="card shadow border-0 mb-7">
                         <div class="card-header">
                             <h5 class="mb-0">Applications</h5>
@@ -159,16 +173,22 @@ include('./conexion.php');
                                         <th scope="col">Name</th>
                                         <!-- <th scope="col">photo</th> -->
                                         <!-- <th scope="col">Position</th> -->
-                                        <th scope="col">nationalites</th>
-                                        <th scope="col">club</th>
+                                        <!-- <th scope="col">nationalites</th>
+                                        <th scope="col">club</th> -->
                                         <th scope="col">rating</th>
+                                        <th scope="col">pace</th>
+                                        <th scope="col">shooting</th>
+                                        <th scope="col">passing</th>
+                                        <th scope="col">dribbling</th>
+                                        <th scope="col">defending</th>
+                                        <th scope="col">physical</th>
+                                        <th scope="col">pace</th>
+                                        <th scope="col">shooting</th>
+                                        <th scope="col">passing</th>
+                                        <th scope="col">dribbling</th>
+                                        <th scope="col">defending</th>
+                                        <th scope="col">physical</th>
                                         <th scope="col" class="text-center">Action</th>
-                                        <!-- <th scope="col">pace</th>
-                                    <th scope="col">shooting</th>
-                                    <th scope="col">passing</th>
-                                    <th scope="col">dribbling</th>
-                                    <th scope="col">defending</th>
-                                    <th scope="col">physical</th> -->
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -181,7 +201,7 @@ include('./conexion.php');
                                             </a>
                                         </td>
 
-                                        <td>
+                                        <!-- <td>
                                             <img alt="..." src="https://cdn.sofifa.net/flags/ar.png" class="avatar avatar-xs rounded-circle me-2">
                                             <a class="text-heading font-semibold">
                                                 Argentina
@@ -191,13 +211,74 @@ include('./conexion.php');
                                             <a class="text-heading font-semibold">
                                                 Inter Miami
                                             </a>
-                                        </td>
+                                        </td> -->
 
                                         <td>
                                             <span class="badge badge-lg badge-dot">
                                                 <i class="bg-success"></i>93
                                             </span>
                                         </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-lg badge-dot">
+                                                <i class="bg-success"></i>93
+                                            </span>
+                                        </td>
+
                                         <td class="text-end">
 
                                             <a href="#" class="btn d-inline-flex btn-sm btn-warning mx-1">
@@ -219,62 +300,17 @@ include('./conexion.php');
                                     </tr>
 
 
-
-
-                                    <tr>
-                                        <td>
-                                            <img alt="..." src="https://cdn.sofifa.net/players/158/023/25_120.png" class="avatar avatar-sm rounded-circle me-2">
-                                            <a class="text-heading font-semibold" href="#">
-                                                Lionel Messi
-                                            </a>
-                                        </td>
-
-                                        <td>
-                                            <img alt="..." src="https://cdn.sofifa.net/flags/ar.png" class="avatar avatar-xs rounded-circle me-2">
-                                            <a class="text-heading font-semibold">
-                                                Argentina
-                                        </td>
-                                        <td>
-                                            <img alt="..." src="https://cdn.sofifa.net/meta/team/239235/120.png" class="avatar avatar-xs rounded-circle me-2">
-                                            <a class="text-heading font-semibold">
-                                                Inter Miami
-                                            </a>
-                                        </td>
-
-                                        <td>
-                                            <span class="badge badge-lg badge-dot">
-                                                <i class="bg-success"></i>93
-                                            </span>
-                                        </td>
-                                        <td class="text-end">
-
-                                            <a href="#" class="btn d-inline-flex btn-sm btn-warning mx-1">
-
-                                                <span>View</span>
-                                            </a>
-
-                                            <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
-                                                <span class=" pe-2">
-                                                    <i class="bi bi-pencil"></i>
-                                                </span>
-                                                <span>Edit</span>
-                                            </a>
-                                            <!-- <a href="#" class="btn btn-sm btn-neutral">Edit</a> -->
-                                            <button type="button" onclick="showSweetAlert()" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-
-
-
-                                    
 
                                 </tbody>
                             </table>
                         </div>
+
+
                         <div class="card-footer border-0 py-5">
                             <!-- <span class="text-muted text-sm">Showing 10 items out of 250 results found</span> -->
+
+
+
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination">
                                     <li class="page-item"><a class="page-link disabled" href="#">Previous</a></li>
@@ -284,11 +320,18 @@ include('./conexion.php');
                                     <li class="page-item"><a class="page-link" href="#">Next</a></li>
                                 </ul>
                             </nav>
+
+
+
                         </div>
+
                     </div>
-                    
+
                 </div>
             </main>
+
+
+
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
