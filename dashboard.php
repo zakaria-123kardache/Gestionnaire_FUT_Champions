@@ -125,16 +125,21 @@ $sql = " SELECT * FROM donnes ";
                     <!-- Card stats -->
 
                     <?php
-                    $sql = " SELECT * FROM players ";
-                    echo "< class=\"card shadow border-0 mb-7\">";
+                    $sql = " SELECT * FROM players";
+                    if ($result = mysqli_query($conn, $sql)) {
+                        if (mysqli_num_rows($result) > 0) {
+                            echo "<main class=\"py-6 bg-surface-secondary\"> ";
+                            echo "<div class=\"container-fluid\"> ";
+                    echo "<div class=\"card shadow border-0 mb-7\">";
                     echo "<div class=\"card-header\">";
                     echo "<h5 class=\"mb-0\">Applications</h5>";
                     echo "</div>";
                     echo "<div class=\"table-responsive\">";
                     echo "<table class=\"table table-hover table-nowrap\">";
                     echo "<thead class=\"thead-light\">";
-                    echo "<>";
+                    echo "<th scope=\"col\">#id</th>";
                     echo "<th scope=\"col\">Name</th>";
+                    echo "<th scope=\"col\">Photo</th>";
                     echo "<th scope=\"col\">rating</th>";
                     echo "<th scope=\"col\">pace</th>";
                     echo "<th scope=\"col\">shooting</th>";
@@ -156,11 +161,11 @@ $sql = " SELECT * FROM donnes ";
                     while ($row = mysqli_fetch_array($result)) {
                         echo " <tr>";
                         echo " <td>" . $row['id'] . "</td>";
-                        echo " <td>" . " <img alt=\"...\" src=\"$row['photo']\" class=\"avatar avatar-sm rounded-circle me-2\">" . "</td>";
-                        echo "  <a class=\"text-heading font-semibold\">"  . $row['name'] . "</a>";
-                        echo "</td>";
-                        
-                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['rating'] . "</span>". "</td>";
+                        // echo "</td>";
+                        echo "  <td class=\"text-heading font-semibold\">"  . $row['name'] . "</td>";
+                        // echo " <td>" . " <img src=\"$row['photo']\" class=\"avatar avatar-sm rounded-circle me-2\">" . "</td>";
+                        echo "<td>" . "<img src =\"" . $row['photo']."\" class=\"avatar avatar-sm rounded-circle me-2\">" . "</td>"; 
+                        echo "<td>". " <span class=\"badge badge-lg badge-dot\">". "<i class=\"bg-success\">" ."</i>". $row['rating'] . "</span>". "</td>";
 
                         echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['diving'] . "</span>". "</td>";
 
@@ -188,11 +193,22 @@ $sql = " SELECT * FROM donnes ";
                   
                         echo "</tr>";
                       }
-                   
+                      echo "</tbody>";
+                      echo "</table>";
+                      echo "</div>";
 
+                      mysqli_free_result($result);
+                    } else {
+                      echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+                    }
+                  } else {
+                    echo "Oops! Something went wrong. Please try again later.";
+                  }
+                      
 
+                  // Close connection
+            mysqli_close($conn);
                     ?>
-
 
 
 
