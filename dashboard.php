@@ -191,11 +191,32 @@ $sql = " SELECT * FROM donnes ";
 
                         echo "<td>". " <span class=\"badge badge-lg badge-dot\">" . $row['defending'] . "</span>". "</td>";
                   
+                        // echo "</tr>";
+
+                        echo "<td class=\"text-end\">";
+                        echo "<a class=\"btn d-inline-flex btn-sm btn-warning mx-1 \">" . "<span>" . "View" . "</span>" . "</a>";
+                        echo "<a class=\"btn d-inline-flex btn-sm btn-primary mx-1\">";
+
+                        echo "<span class=\" pe-2\">" . "<i class=\"bi bi-pencil\">" . "</i>" . "</span>". "<span>"."Edit"."</span>" . "</a>";
+                        echo "<button type=\"button\" onclick=\"showSweetAlert()\" class=\"btn btn-sm btn-square btn-neutral text-danger-hover\">" . "<i class=\"bi bi-trash\">" . "</i>" ." </button>";
+                        // echo "<i class=\"bi bi-trash\">" . "</i>" ." </button>";
+                        echo "</td>";
                         echo "</tr>";
+
+
                       }
                       echo "</tbody>";
                       echo "</table>";
                       echo "</div>";
+
+                      echo "<div class=\"card-footer border-0 py-5\">";
+                      echo "<nav aria-label=\"Page navigation example\">";
+                      echo "<ul class=\"pagination\">";
+                      echo " <li class=\"page-item\">" . "" ."";
+                      
+
+
+
 
                       mysqli_free_result($result);
                     } else {
